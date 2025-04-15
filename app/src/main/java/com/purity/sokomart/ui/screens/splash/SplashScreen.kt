@@ -1,4 +1,4 @@
-package com.purity.sokomart.ui.screens.splash
+ package com.purity.sokomart.ui.screens.splash
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -28,6 +28,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.purity.sokomart.R
 import com.purity.sokomart.navigation.ROUT_DASHBOARD
+import com.purity.sokomart.navigation.ROUT_LOGIN
+import com.purity.sokomart.navigation.ROUT_REGISTER
 import com.purity.sokomart.ui.theme.newGreen
 import com.purity.sokomart.ui.theme.newNavy
 import kotlinx.coroutines.delay
@@ -40,7 +42,7 @@ fun SplashScreen(navController: NavController) {
     val coroutine= rememberCoroutineScope()
     coroutine.launch{
         delay(1000)
-        navController.navigate(ROUT_DASHBOARD)
+        navController.navigate(ROUT_LOGIN)
 
     }
     Column (modifier = Modifier.fillMaxSize().background(newNavy), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center){
